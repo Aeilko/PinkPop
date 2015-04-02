@@ -13,13 +13,98 @@ exports.render = ->
 		
 		contain = Obs.create false
 		showPicture({key: Plugin.resourceUri('map.jpg')})
+	else if p == 'artiesten'
+		p2 = Page.state.get(1)
+		if p2 == 'v'
+			# Individuele Artiest bekijken
+			
+		else if p2 == 'vr'
+			Dom.div !->
+				
+				showArtiestBlok({naam: 'Muse', podium: 'Main Stage', link: 'muse', image: 'muse.jpg', bg: '#e6007e'})
+				showArtiestBlok({naam: 'Elbow', podium: 'Main Stage', link: 'elbow', image: 'elbow.jpg', bg: '#e6007e'})
+				showArtiestBlok({naam: 'George Ezra', podium: 'Main Stage', link: 'george-ezra', image: 'george-ezra.jpg', bg: '#e6007e'})
+				showArtiestBlok({naam: 'Slash', podium: '3FM Stage', link: 'slash', image: 'slash.jpg', bg: '#e6007e'})
+				showArtiestBlok({naam: 'Faith No More', podium: '3FM Stage', link: 'faith-no-more', image: 'faith-no-more.jpg', bg: '#e6007e'})
+				showArtiestBlok({naam: 'Shaka Ponk', podium: '3FM Stage', link: 'shaka-ponk', image: 'shaka-ponk.jpg', bg: '#e6007e'})
+				showArtiestBlok({naam: 'Above & Beyond', podium: 'Brand Bier Stage', link: 'above-and-beyond', image: 'above-and-beyond.jpg', bg: '#e6007e'})
+				showArtiestBlok({naam: 'Paloma Faith', podium: 'Brand Bier Stage', link: 'paloma-faith', image: 'paloma-faith.jpg', bg: '#e6007e'})
+				showArtiestBlok({naam: 'Gavin James', podium: 'Brand Bier Stage', link: 'gavin-jones', image: 'gavin-james.jpg', bg: '#e6007e'})
+				showArtiestBlok({naam: 'The Amazing Laserbeams', podium: 'Brand Bier Stage', link: 'amazing-laserbeams', image: 'amazing-laserbeams.jpg', bg: '#e6007e'})
+				showArtiestBlok({naam: 'DJ\'s Waxfiend & Prime', podium: 'Stage 4', link: 'djs-waxfiend-and-prime', image: 'djs-waxfiend-and-prime.jpg', bg: '#e6007e'})
+				showArtiestBlok({naam: 'Pop Evil', podium: 'Stage 4', link: 'pop-evil', image: 'pop-evil.jpg', bg: '#e6007e'})
+				showArtiestBlok({naam: 'Aurora', podium: 'Stage 4', link: 'aurora', image: 'aurora.jpg', bg: '#e6007e'})
+				showArtiestBlok({naam: 'Coasts', podium: 'Stage 4', link: 'coasts', image: 'coasts.jpg', bg: '#e6007e'})
+		
+		else if p2 == 'za'
+			Dom.div !->
+				showArtiestBlok({naam: 'Robbie Williams', podium: 'Main Stage', link: 'robbie-williams', image: 'robbie-williams.jpg', bg: '#792182'})
+				showArtiestBlok({naam: 'The Script', podium: 'Main Stage', link: 'the-script', image: 'the-script.jpg', bg: '#792182'})
+				showArtiestBlok({naam: 'Anouk', podium: 'Main Stage', link: 'anouk', image: 'anouk.jpg', bg: '#792182'})
+				showArtiestBlok({naam: 'Avicii', podium: '3FM Stage', link: 'avicii', image: 'avicii.jpg', bg: '#792182'})
+		
+		else if p2 == 'zo'
+			Dom.div !->
+				showArtiestBlok({naam: 'Foo Fighters', podium: 'Main Stage', link: 'foo-fighters', image: 'foo-fighters.jpg', bg: '#b4b415'})
+				showArtiestBlok({naam: 'Pharrell', podium: 'Main Stage', link: 'pharrel', image: 'pharrell.jpg', bg: '#b4b415'})
+				showArtiestBlok({naam: 'OneRepublic', podium: 'Main Stage', link: 'onerepublic', image: 'one-republic.jpg', bg: '#b4b415'})
+				showArtiestBlok({naam: 'Sam Smith', podium: '3FM Stage', link: 'sam-smith', image: 'sam-smith.jpg', bg: '#b4b415'})
+		
+		else
+			Ui.list !->
+				Dom.h2 "Artiesten"
+				Ui.item !->
+					Dom.text "Vrijdag"
+					Dom.onTap !->
+						Page.nav ['artiesten', 'vr']
+				Ui.item !->
+					Dom.text "Zaterdag"
+					Dom.onTap !->
+						Page.nav ['artiesten', 'za']
+				Ui.item !->
+					Dom.text "Zondag"
+					Dom.onTap !->
+						Page.nav ['artiesten', 'zo']
 	else
 		Ui.list !->
 			Dom.h2 "Menu"
 			Ui.item !->
+				Dom.text "Artiesten"
+				Dom.onTap !->
+					Page.nav 'artiesten'
+			Ui.item !->
 				Dom.text "Kaart"
 				Dom.onTap !->
 					Page.nav 'map'
+					
+
+
+showArtiestBlok = (opts) !->
+	Dom.div !->
+		Dom.onTap !->
+			Page.nav ['artiesten', 'v', opts.link]
+		Dom.style
+			width: '100%'
+			height: '150px'
+			display: 'inline-block'
+			backgroundImage: 'url(' + Plugin.resourceUri(opts.image) + ')'
+			backgroundSize: 'cover'
+			backgroundPosition: '50% 50%'
+			overflow: 'hidden'
+			position: 'relative'
+			marginBottom: '5px'
+		
+		Dom.div !->
+			Dom.text "" + opts.naam + " - " + opts.podium
+			Dom.style
+				padding: '5px'
+				width: '100%'
+				display: 'block'
+				position: 'absolute'
+				bottom: '0'
+				backgroundColor: opts.bg
+				color: 'white'
+				fontWeight: 'bold'
 
 
 # Source: https://github.com/Happening/Core/blob/master/photoview.client.coffee
