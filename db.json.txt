@@ -1,0 +1,398 @@
+{0:{
+"dagen":{
+	"vr":{
+		"naam":"Vrijdag",
+		"kleur":"#e6007e"
+	},
+	"za":{
+		"naam":"Zaterdag",
+		"kleur":"#792182"
+	},
+	"zo":{
+		"naam":"Zondag",
+		"kleur":"#b4b415"
+	}
+},
+"podia":{
+	1:{
+		"naam":"Main Stage"
+	},
+	2:{
+		"naam":"3FM Stage"
+	},
+	3:{
+		"naam":"Brand Stage"
+	}
+},
+"artiesten":{
+	0:{
+		"naam": "Muse",
+		"dag" : "vr",
+		"podium": 1,
+		"start" : 22.15,
+		"stop" : 23.30,
+		"img" : "muse.jpg",
+		"text" : "Meer dan twintig miljoen verkochte platen, maar misschien nog belangrijker, Muse is een van de beste live-acts ter wereld. Alsof ze niet thuis kunnen zijn. Road-hungry, noemen ze dat. Het Britse trio verdient eigenlijk juist geen verdere inleiding, de vier letters zouden voldoende moeten zijn. Oja, het langverwachte, zevende studioalbum ‘Drones’ verschijnt voor Pinkpop!"
+	},
+	1:{
+		"naam": "Elbow",
+		"dag" : "vr",
+		"podium": 1,
+		"start" : 20.15,
+		"stop" : 21.15,
+		"img" : "elbow.jpg",
+		"text" : "Nog steeds dezelfde formatie als in 1992; Elbow is in meer dan twintig jaar eigenlijk geen spat veranderd. Het vijftal maakt nog steeds prachtige muziek. Zanger Guy Garvey heeft bovendien gelukkig nooit concessies gedaan aan zijn Britse accent. In Engeland wordt de band mede daarom nog altijd op handen gedragen. Sterker nog, de populariteit lijkt te groeien. Hun laatste album belandde voor het eerst direct in de top van de Britse hitlijsten."
+	},
+	2:{
+		"naam": "George Ezra",
+		"dag" : "vr",
+		"podium": 1,
+		"start" : 18.15,
+		"stop" : 19.15,
+		"img" : "george-ezra.jpg",
+		"text" : "Je kunt wel lachen met George Ezra. In 2014 zei hij het volgende. “Mensen zeggen dat dit ‘mijn jaar’ wordt. Dat is fijn, maar problematisch. Ik ben van plan om dit nog wat langer te doen.” Wij denken niet dat George bang hoeft te zijn. De honderden miljoenen downloads, views en streams tot nu toe onderstrepen zijn talent nog maar eens.  Nog los van die stem, daar zit geen houdbaarheidsdatum op."
+	},
+	3:{
+		"naam": "Body Count Ft. Ice-T",
+		"dag" : "vr",
+		"podium": 1,
+		"start" : 16.15,
+		"stop" : 17.15,
+		"img" : "bodycount.jpg",
+		"text" : "Wie is er niet groot mee geworden? Nou goed, ook best veel mensen niet, maar die ene generatie natuurlijk wel. Body Count zorgde begin jaren negentig voor een schokgolf, in de muziekindustrie én ver daarbuiten. West Coast-icoon Ice T had het onder meer over de moord op politieagenten. Iets wat ze in conservatief Amerika niet helemáál begrepen. De metal- en hiphopact is bezig aan een serieuze comeback. En dat kunnen we alleen maar toejuichen natuurlijk."
+	},
+	4:{
+		"naam": "Shaka Ponk",
+		"dag" : "vr",
+		"podium": 2,
+		"start" : 17.15,
+		"stop" : 18.15,
+		"img" : "shaka-ponk.jpg",
+		"text" : "Uh, tsja, hoe zullen we het omschrijven als je het nog niet kent. Shaka Ponk is een experimentele Franse rockband, die een pokkehekel heeft om in hokjes te denken. Alles kan, alles mag. Er wordt gezongen en gerapt in het Frans, Spaans en Engels en daarnaast kun je zo’n beetje elke stijl voorbij horen komen. Je kunt het beste even gaan kijken naar Shaka Ponk. En luisteren natuurlijk."
+	},
+	5:{
+		"naam": "Faith No More",
+		"dag" : "vr",
+		"podium": 2,
+		"start" : 19.15,
+		"stop" : 20.15,
+		"img" : "faith-no-more.jpg",
+		"text" : "That’s why I’m easy. I’m easy like Sunday morning. Faith no More is misschien wel het meest bekend door hun fantastisch uitgevoerde cover van The Commodores. Het zegt veel over de groep uit Californië; FNM is veelzijdig en schakelt moeiteloos een versnellingkje lager. Of hoger. Faith no More heeft door een mix van funk, metal, hiphop en rock een fanbase voor zich gewonnen.  Dat het grootste gedeelte daarvan de band altijd trouw is gebleven, zegt eigenlijk alles."
+	},
+	6:{
+		"naam": "Slash",
+		"dag" : "vr",
+		"podium": 2,
+		"start" : 21.15,
+		"stop" : 22.15,
+		"img" : "slash.jpg",
+		"text" : "De voormalige icoon van Guns ’n Roses trekt al een tijdje samen op met Myles Kennedy. Die laatste haalde er – alsof het nog niet genoeg was- op zijn beurt weer the Conspirators bij. Wat je kunt verwachten? Alles. En meer. Slash kan uiteraard putten uit een indrukwekkend oeuvre en dat geldt net zo goed voor de frontman van Alter Bridge. En dat staat nog los van het album ‘World on Fire’, dat de twee grootheden vorig jaar samen uitbrachten. Pak je luchtgitaar dus."
+	},
+	7:{
+		"naam": "Jick Munro",
+		"dag" : "vr",
+		"podium": 3,
+		"start" : 15.30,
+		"stop" : 16.15,
+		"img" : "amazing-laserbeams.jpg",
+		"text" : "De grondleggers van de band kennen elkaar van de leraaropleiding. Echt? Ja, echt. Verder heet er een lid Kiki Double D en zit accordeonist Sjeng al een tijdje bij Jick Munro and the Amazing Laserbeams. Er is nog niks over de muziek gezegd, maar je weet nu al dat het geweldig klinkt. Het is in ieder geval handclappin’ en feetstompin’, wat de klok slaat. Zeggen ze tenminste zelf. En wie zijn wij om te twijfelen aan de winnaar van Nu of Nooit 2015?"
+	},
+	8:{
+		"naam": "Paloma Faith",
+		"dag" : "vr",
+		"podium": 3,
+		"start" : 17.15,
+		"stop" : 18.15,
+		"img" : "paloma-faith.jpg",
+		"text" : "Op de achtergrond werkte ze al keihard. In hometown Londen wisten muziekliefhebbers allang wie ze was, insiders in de industrie ook. Maar het duurde even voordat Paloma Faith de kans kreeg waar ze op zat te wachten. Nu is ze daar. Met een strot van goud, vaak gesteund door blazers, heeft ze haar eigen plek veroverd. En de zangeres is niet van plan om ook maar ergens heen te gaan."
+	},
+	9:{
+		"naam": "Gavin James",
+		"dag" : "vr",
+		"podium": 3,
+		"start" : 19.15,
+		"stop" : 20.15,
+		"img" : "gavin-james.jpg",
+		"text" : "Gavin James forceerde zijn eigen doorbraak met ‘The Book of Love’, een nummer waarmee hij vooral nogal wat vrouwenharten wist te veroveren. De Ier was daarnaast een van de verrassingen op Eurosonic Noorderslag en in januari tekende hij een deal bij Capitol Records. De zanger trad ook al op met James Blunt en Kodaline. Kortom, als de voortekenen niet bedriegen, dan gaan we nog heel veel plezier beleven aan Gavin James."
+	},
+	10:{
+		"naam": "Above & Beyond",
+		"dag" : "vr",
+		"podium": 3,
+		"start" : 21.15,
+		"stop" : 22.15,
+		"img" : "above-and-beyond.jpg",
+		"text" : "Jonathan Grant, Tony McGuinness en Paavo Siljamäki vormen samen sinds 2000 Above & Beyond. Hun eerste belangrijke wapenfeit, de remix van Madonna’s ‘What it Feels Like For a Girl’, in 2001. Het trance-trio genereert steeds meer aandacht door hun progressieve beats, maar de echte knal komt als er eigen producties volgen. Op het Anjunabeats-label volgen er in de loop der jaren tal van hits. Above & Beyond staat garant voor vuurwerk."
+	},
+	11:{
+		"naam": "The Wombats",
+		"dag" : "za",
+		"podium": 1,
+		"start" : 14.40,
+		"stop" : 15.25,
+		"img" : "the-wombats.jpg",
+		"text" : "Zoals zoveel bekende voorgangers zijn ook The Wombats afkomstig uit Liverpool. Het is de zoveelste Noord-Engelse groep die overloopt van het talent. De postpunkband, die graag experimenteert, begon met een reeks van EP’s en kreeg langzaam maar zeker voet aan de grond in de UK. The Wombats ontvingen in 2008 voor hun ‘Let’s Dance to Joy Division’ de prestigieuze NME-award in de categorie ‘Best Dancefloor Filler’. De energieke shows springen in het oog."
+	},
+	12:{
+		"naam": "Dotan",
+		"dag" : "za",
+		"podium": 1,
+		"start" : 16.15,
+		"stop" : 17.15,
+		"img" : "dotan.jpg",
+		"text" : "Do-tan, Do-tan, Do-tan! We zien het moment al voor ons, even voordat hij het podium van Pinkpop beklimt. Kabaal. Al is het maar om vast zelf even de keel los te maken. De in Jeruzalem geboren Dotan is singer-songwriter van beroep, en hij heeft hart voor de zaak. De twintiger heeft nu al meer meezingers op zijn naam dan artiesten die al heel wat langer in het vak zitten. Al die nummers hier opnoemen? Past niet. We zien je daar wel gewoon."
+	},
+	13:{
+		"naam": "Anouk",
+		"dag" : "za",
+		"podium": 1,
+		"start" : 18.15,
+		"stop" : 19.15,
+		"img" : "anouk.jpg",
+		"text" : "Haar laatste album ‘Paradise and Back Again’ beschrijft ze zelf als een bij elkaar geraapt zooitje. En dat is met de nodige zelfspot natuurlijk. Anouk houdt van een geintje, en wij houden van Anouk. Daarom zijn we ook zo blij dat ze back again is op Pinkpop. De sound op haar laatste plaat is dan weer wat minder gepolijst en dan weer wat poppy. Maar het is onmiskenbaar Anouk. We hebben er zin in."
+	},
+	14:{
+		"naam": "The Script",
+		"dag" : "za",
+		"podium": 1,
+		"start" : 20.15,
+		"stop" : 21.15,
+		"img" : "the-script.jpg",
+		"text" : "De Ierse band The Script heeft overduidelijk het momentum gegrepen. De mannen uit Dublin zijn al vanaf 2001 bezig en acteren inmiddels op de toppen van hun kunnen. Danny O’Donoghue, Mark Sheehan en Glen Power speelden in het voorjaar twee keer een uitverkocht Ziggodome plat en zijn nu klaar voor het festivalseizoen. Met hun grote voorraad aan hits moet dat wel goed komen. Denk aan ‘Superheroes’, ‘Hall of Fame’ en ‘No Good in Goodbye’."
+	},
+	15:{
+		"naam": "Robbie Williams",
+		"dag" : "za",
+		"podium": 1,
+		"start" : 22.15,
+		"stop" : 23.30,
+		"img" : "robbie-williams.jpg",
+		"text" : "Robbie Williams heeft inmiddels zoveel onderscheidingen, platina-platen en awards binnengesleept dat hij ze niet meer op zijn zolderverdieping kwijt kan. Maar de ras-artiest – die ooit begon bij boyband Take That en de boyband op het hoogtepunt gedag zei – dendert maar gewoon door. De Let Me Entertain You Tour die in het voorjaar van 2015 plaatshad is daar het zoveelste bewijs van. En nu staat hij alweer op Pinkpop. Robbie Williams = pure Engelse klasse."
+	},
+	16:{
+		"naam": "The Last Internationale",
+		"dag" : "za",
+		"podium": 2,
+		"start" : 14.00,
+		"stop" : 14.40,
+		"img" : "the-last-internationale.jpg",
+		"text" : "Ontmoet Delila Paz, Edgey Pires en Brad Wilk (de drummer van Rage Against The Machine), oftewel The Last Internationale. Deze New Yorkers trappen de boel ongetwijfeld wel wakker op de zaterdagochtend. Debuutalbum ‘We Will Reign’ werd mede geproduceerd door Tom Morello; ja, dat is die andere van Rage Against the Machine.  En dus kun je inderdaad rekenen op een rauwe sound. The Last Internationale is zo’n bandje waarvan je later zegt, ik was er toen bij op Pinkpop."
+	},
+	17:{
+		"naam": "Jonathan Jeremiah",
+		"dag" : "za",
+		"podium": 2,
+		"start" : 15.25,
+		"stop" : 16.15,
+		"img" : "jonathan-jeremiah.jpg",
+		"text" : "We verheugen ons op het optreden van de Britse soulfolk-zanger Jonathan Jeremiah, die in 2010 in ons land doorbrak met zijn single ‘Lost’. Inmiddels zijn we alweer wat jaartjes, maar ook wat hits en albums verder.  Want de in Londen geboren artiest blijft productief. Afgelopen maart nog verscheen ‘Oh Desire’, de meest recente plaat van Jeremiah. En zoals altijd is het vakwerk; of je hem nou op de speakers in je huiskamer hoort of op de festivalweide."
+	},
+	18:{
+		"naam": "Selah Sue",
+		"dag" : "za",
+		"podium": 2,
+		"start" : 17.15,
+		"stop" : 18.15,
+		"img" : "selah-sue.jpg",
+		"text" : "Inmiddels al meer dan 1 miljoen platen verkocht en de teller loopt door voor het Vlaamse megatalent. Selah Sue komt in maart van 2015 met haar volgende plaat ‘Reason’ en daar kijken heel veel mensen naar uit. Net als wij. Producer Robin Hannibal, die ook werkte met Kendrick Lamar, was een van de ‘begeleiders’ op die nieuwe muzikale reis. In de tussentijd speelde ze voor uitverkochte zalen. We waren en zijn diep onder de indruk."
+	},
+	19:{
+		"naam": "Avicii",
+		"dag" : "za",
+		"podium": 2,
+		"start" : 21.15,
+		"stop" : 22.15,
+		"img" : "avicii.jpg",
+		"text" : "Avicii had vorig jaar zo’n beetje de hele housescene op slot zitten. Alles wat hij aanraakte, veranderde in platina. Ingelegd met diamanten. De Zweedse producer had megahits met ‘Wake me Up’ en ‘Hey Brother’. De sleutel, kant en klare levenslessen die zijn ingezongen over catchy en vrolijke beats. Avicii, in een vorig leven Tim Bergling, is misschien wel klaar om zichzelf deze zomer te overtreffen."
+	},
+	20:{
+		"naam": "Gaz Coombes",
+		"dag" : "za",
+		"podium": 3,
+		"start" : 14.00,
+		"stop" : 14.40,
+		"img" : "gaz-coombes.jpg",
+		"text" : "Zeg je Gaz Coombes, dan zeg je Supergrass. De legendarische singer-songwriter heeft  al een behoorlijke reis door het muzieklandschap afgelegd. De concurrentie gaf hij onlangs een slinger met zijn tweede soloplaat ‘Matador’. Een meesterwerk, vond het toonaangevende muziekmagazine Q. Hoe het vervolg van de muziektrip van Coombes er ook gaat uitzien; hij kan nu al terugkijken op een carrière waar je gerust kapitalen voor mag gebruiken."
+	},
+	21:{
+		"naam": "Magic!",
+		"dag" : "za",
+		"podium": 3,
+		"start" : 15.25,
+		"stop" : 16.15,
+		"img" : "magic.jpg",
+		"text" : "Canadese boy wonder van de popmuziek. Nasri Atweh was onderdeel van productieteam The Messengers en die waren weer medeverantwoordelijk voor de superhits van onder meer Justin Bieber, Chris Brown, Christina Aguilera en Pitbull. Met Magic! trok Nasri zijn eigen plan; hij vond het mooi geweest achter de schermen. Had met ‘Rude’ meteen een onwaarschijnlijke voltreffer en lijkt onderweg naar heel veel meer. Verwacht een gebalanceerde mix van pop, r&b en reggae."
+	},
+	22:{
+		"naam": "John Coffey",
+		"dag" : "za",
+		"podium": 3,
+		"start" : 17.15,
+		"stop" : 18.15,
+		"img" : "john-coffey.jpg",
+		"text" : "Heuuuj! ‘Beuken voor het vaderland’, zo hebben ze het bij John Coffey omschreven. Voor de duidelijkheid, we hebben het over de manier waarop de band zijn eigen shows typeert. Niet voor de ‘soft hearted’, deze mannen. Punkrock waarop gegarandeerd de pleuris uitbreekt. Maar wel op een leuke manier. Het derde album (‘The Great News’) kwam begin 2015 uit en staat ook garant voor gerag. De eerste single heet ‘Broke Neck’. Tuurlijk."
+	},
+	23:{
+		"naam": "Sheppard",
+		"dag" : "za",
+		"podium": 3,
+		"start" : 19.15,
+		"stop" : 20.15,
+		"img" : "sheppard.jpg",
+		"text" : "Het gaat hard met het familiebedrijf. Amy en George Sheppard begonnen de gelijknamige band en haalden al snel zusje Emma erbij. Drie vrienden completeerden de formatie, die nog niet zo gek lang geleden doorbrak. Sheppard wordt gekenmerkt door een aanstekelijk, poppy geluid. Zo ongeveer als de up-tempohit ‘Geronimo’, alleen mensen op een booreiland kunnen zeggen dat ze dat nummer nog niet kennen.  Enfin, Sheppard knalt! De plaat kreeg niet voor niets de naam ‘Bombs Away!’ mee."
+	},
+	24:{
+		"naam": "Eagles of Death Metal",
+		"dag" : "za",
+		"podium": 3,
+		"start" : 21.15,
+		"stop" : 22.15,
+		"img" : "eagles-of-death-metal.jpg",
+		"text" : "Whohooow! Dat wordt ouderwets losgaan met Eagles of Death Metal. Met hun rock & roll, dan wel garage rock, dan wel bak herrie. In ieder geval is het niet echt metal. Zeg maar. Maar goed, hier kijken we dus wel naar uit. De formatie, opgericht door Josh Homme (Queens of the Stone Age) en Jesse Hughes, ragt er al wat jaartjes op los. En ze zetten de tent nog steeds met alle liefde op zijn kop. Alsof het dronken kampeerders zijn."
+	},
+	25:{
+		"naam": "Frank Turner",
+		"dag" : "zo",
+		"podium": 1,
+		"start" : 13.45,
+		"stop" : 14.30,
+		"img" : "frank-turner.jpg",
+		"text" : "Maak kennis met Frank Turner and the Sleeping Souls, een act die garant staat voor een stevig sing-a-long-gehalte. Ook al ken je de teksten misschien helemaal niet. Turner dankt zijn doorbraak niet voor niets aan een bepaald festivaloptreden in Engeland.  Nee, de punk/folk van Turner werkt aanstekelijk, en het is nooit hetzelfde trucje. Dat bewees hij eind 2014 nogmaals met zijn laatste album ‘The Third Three Years’."
+	},
+	26:{
+		"naam": "De Jeugd van Tegenwoordig",
+		"dag" : "zo",
+		"podium": 1,
+		"start" : 15.30,
+		"stop" : 16.30,
+		"img" : "de-jeugd-van-tegenwoordig.jpg",
+		"text" : "Daar zijn ze weer! En de boys van weleer zijn mannen geworden. Zo klinken ze althans, het gaat niet alleen nog maar om slempen, kutten en lekker gaan. Hoewel. Tegenwoordig doet de Jeugd het wat anders, maar toch ook weer niet. Bas Bron beukt nog steeds even hard en de songteksten hebben de tand des tijds doorstaan. Yayo, Willie en Vieze blijven daarnaast hun arsenaal maar uitbreiden. DJVT was en blijft relevant."
+	},
+	27:{
+		"naam": "OneRepublic",
+		"dag" : "zo",
+		"podium": 1,
+		"start" : 17.30,
+		"stop" : 18.30,
+		"img" : "onerepublic.jpg",
+		"text" : "Via ‘Apologize’ blijft OneRepublic maar klimmen in de zelf gefabriceerde wenteltrap. Die loopt van de bodem tot de top. De weg was lang, sinds de oprichting in 2002. Ryan Tedder is het brein achter de soms mierzoete producties van de band. Maar knap blijft het, het succes van OneRepublic. ‘Counting Stars’ zorgde ervoor dat echt niemand meer in de popindustrie nog om de mannen heen kon."
+	},
+	28:{
+		"naam": "Pharrell Williams",
+		"dag" : "zo",
+		"podium": 1,
+		"start" : 19.30,
+		"stop" : 20.30,
+		"img" : "pharrell-williams.jpg",
+		"text" : "Hij is de veertig pas net gepasseerd, maar inmiddels mag je al bijna spreken van een legende. Pharrell Williams heeft zo’n beetje zijn eigen universum geschapen. Eigenlijk al sinds zijn begintijd bij Neptunes. Invloedrijk als producer, uniek als zanger en daarnaast heeft hij oog voor talent. Gaf de wereld vorig jaar een reden om niet op te houden met dansen. ‘Happy’ ontroerde en inspireerde velen in de zomer van 2013 én 2014."
+	},
+	29:{
+		"naam": "Foo Fighters",
+		"dag" : "zo",
+		"podium": 1,
+		"start" : 21.30,
+		"stop" : 23.30,
+		"img" : "foo-fighters.jpg",
+		"text" : "Moeten we nog iets zeggen, of niet? Vooruit dan. Foo Fighters op Pinkpop, dat betekent een memorabele en magische avond. Dave Grohl en zijn mannen sluiten het festival dit jaar af en naar die show kijken we nu al reikhalzend uit. Als het optreden van 2011 als norm geldt, dan worden we alleen maar enthousiaster. De band speelde met zichtbaar veel plezier in Landgraaf en sloot ook die editie af."
+	},
+	30:{
+		"naam": "Kitty, Daisy & Lewis",
+		"dag" : "zo",
+		"podium": 2,
+		"start" : 13.00,
+		"stop" : 13.45,
+		"img" : "kitty-daisy-and-lewis.jpg",
+		"text" : "Twee zusjes en een broer, die samen muziek maken. Soms hou je je hart vast als een familie zich in de muziek stort, maar bij Kitty, Daisy & Lewis laat je juist alles los. Afkomstig uit Londen, en met-zonder cockney-accent, blijven ze bezig om het vasteland versteld te doen staan. Dan weer met country, soms met R&B, om vervolgens te eindigen met rock & roll. Of andersom. Het wordt in ieder geval feest!"
+	},
+	31:{
+		"naam": "Typhoon",
+		"dag" : "zo",
+		"podium": 2,
+		"start" : 14.30,
+		"stop" : 15.30,
+		"img" : "typhoon.jpg",
+		"text" : "Niet zomaar een rappertje, Typhoon. Het is een van de weinige mc’s in Nederland die erin is geslaagd om zichzelf met een compleet eigen sound opnieuw op de kaart te zetten. Het album ‘Lobi da Basi’ (Liefde is de basis), waar hij iedereen mee overdonderde, werd een instant classic. Je hoort aan alles dat hij verder is dan de rest. Ty is niet zoals veel van zijn concurrenten op oorlogspad, maar op een missie. Ook Pinkpop slaat hij niet over."
+	},
+	32:{
+		"naam": "Counting Crows",
+		"dag" : "zo",
+		"podium": 2,
+		"start" : 16.30,
+		"stop" : 17.30,
+		"img" : "counting-crows.jpg",
+		"text" : "Sinds de neus aan het venster werd gedrukt, zorgden de Counting Crows hoogstpersoonlijk voor meerdere ontploffingen. De donkere debuutplaat uit 1993 ‘August and Everything After’ leverde meteen de grootste hit tot nu toe op, ‘Mr. Jones’. Ruim tien jaar later was daar opeens voor het grotere publiek de echte kennismaking met ‘Accidentally in Love’. Los van de peilbare successen is de formatie juist ook meer dan constant. Dat bewijzen ze namelijk telkens met hun liveshows."
+	},
+	33:{
+		"naam": "Rise Against",
+		"dag" : "zo",
+		"podium": 2,
+		"start" : 18.30,
+		"stop" : 19.30,
+		"img" : "rise-against.jpg",
+		"text" : "De Amerikaanse punkrock-band Rise Against staat graag op de barricades. Niet dat ze niet van een feestje houden, maar het moet de boys uit Chicago wel ergens over gaan. Zanger Tim McIlrath daarover, “Als schrijver heb ik altijd de verantwoordelijk gevoeld om ons droevige bewustzijn niet alleen te erkennen, maar er ook iets mee te doen.” De doorbraak was er voor Rise Against in 2008. Toen dropte de groep ‘Appeal to Reason’."
+	},
+	34:{
+		"naam": "Placebo",
+		"dag" : "zo",
+		"podium": 2,
+		"start" : 20.30,
+		"stop" : 21.30,
+		"img" : "placebo.jpg",
+		"text" : "Placebo viert in 2015 alweer haar twintigjarig jubileum en in 2013 bracht het huidige trio ook nog eens het zevende studio-album (‘Loud, Like, Love’) uit. De sleet zit er, kortom, bepaald nog niet op. Maar dat komt natuurlijk niet als een verrassing. Brian Molko en zijn mannen zijn onvermoeibaar. Net als in 2009 zal Placebo daarom vast en zeker weer een memorabel optreden verzorgen in Landgraaf."
+	},
+	35:{
+		"naam": "Urbanus & De Fanfaar",
+		"dag" : "zo",
+		"podium": 3,
+		"start" : 13.00,
+		"stop" : 13.45,
+		"img" : "urbanus-en-de-fanfaar.jpg",
+		"text" : "Urbanus is op ‘een frisse missie’, zoals hij het zelf doet. Hij doet iets anders. De Vlaamse legende is deze zomer op pad met De Fanfaar, om een soort van ode te brengen aan rock&roll. Hoe dat klinkt? Verwacht Nederlandstalige nummers van zijn laatste album ‘Wan Toe Trie’, maar verwacht bovenal een origineel stemgeluid. En gitaren natuurlijk. Het grootste verschil tussen het theater en Pinkpop volgens de man zelf? “Er hangen geen gordijnen.”"
+	},
+	36:{
+		"naam": "Nick Mulvey",
+		"dag" : "zo",
+		"podium": 3,
+		"start" : 14.30,
+		"stop" : 15.30,
+		"img" : "nick-mulvey.jpg",
+		"text" : "Nick Mulvey is pas dertig, maar heeft al muzikale kennis opgedaan voor een mensenleven. Hij studeerde kunst & muziek in Havana, verdiepte zich vervolgens in de muziekcultuur van West en Centraal-Afrika en vormde een groep met Portico Quartet. Daarna deed Mulvey het solo. En verdienstelijk ook. De singer-songwriter leverde in 2014 zijn prachtige, dromerige debuutplaat ‘First Mind’ af. Folkliedjes voor de fijnproever."
+	},
+	37:{
+		"naam": "Oscar and the Wolf",
+		"dag" : "zo",
+		"podium": 3,
+		"start" : 16.30,
+		"stop" : 17.30,
+		"img" : "oscar-and-the-wolf.jpg",
+		"text" : "Het Belgische trio dat Oscar and the Wolf vormt, moet een lenige geest hebben. Niet alleen de naam van de formatie klinkt als een klok, ook de producties hebben standaard iets wonderlijks. Dat geldt voor hun eerste twee EP’s, maar ook voor het album ‘Entity’. Zanger en schrijver Max Colombie zingt net zo gemakkelijk als dat hij de knoppen bedient. En dus kunnen we haast niet wachten tot zondag 14 juni."
+	},
+	38:{
+		"naam": "Kovacs",
+		"dag" : "zo",
+		"podium": 3,
+		"start" : 18.30,
+		"stop" : 19.30,
+		"img" : "kovacs.jpg",
+		"text" : "Zangeres Sharon Kovacs heeft zo’n beetje uit het niets de wereld aan haar voeten. Sinds de Eindhovense met haar EP kwam, waaraan producer Oscar Holleman meewerkte, mag ze rekenen op een grote schare liefhebbers. Haar rauwe en imponerende stem zorgt vaak automatisch voor stilte bij het verbouwereerde publiek. Eind vorig jaar verscheen de indrukwekkende film ‘Wolflady’, over de muzikale zoektocht van Kovacs. Eveneens ontving ze een Radio 6-award voor beste talent."
+	},
+	39:{
+		"naam": "Fiddler's Green",
+		"dag" : "zo",
+		"podium": 3,
+		"start" : 20.30,
+		"stop" : 21.30,
+		"img" : "fiddlers-green.jpg",
+		"text" : "Ierse folk uit Duitsland, het is soms even moeilijk om dat bij elkaar op te tellen. Maar Fiddler’s Green bewijst al een kwart eeuw dat we ons druk maken om niets. Het jubileum inspireerde de band om dit jaar een best of-album uit te brengen. Ligt het aan ons, dan zouden we er graag over 25 jaar nog eentje uitgebracht zien. Tot die tijd houden we het nog wel even uit met proostnummers als ‘The Night Pat Murphy Died’."
+	},
+	40:{
+		"naam": "Kensington",
+		"dag" : "za",
+		"podium": 2,
+		"start" : 19.15,
+		"stop" : 20.15,
+		"img" : "kensington.jpg",
+		"text" : "Groot, groter, grootst. Het kon en kan niet op voor de Utrechtse band Kensington. Het succesverhaal houdt maar niet op. De formatie maakt aanstekelijke en toegankelijke muziek en veroverde op die manier heel wat harten in Nederland. Maar ook in landen als Frankrijk, België, Duitsland en Indonesië hebben de mannen voet aan de grond gekregen. Nummers die niet uit je kop te krijgen zijn; Kensington heeft die gave."
+	}
+}
+}}

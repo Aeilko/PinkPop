@@ -4,6 +4,8 @@ Page = require 'page'
 Plugin = require 'plugin'
 Photo = require 'photo'
 Obs = require 'obs'
+Db = require 'db'
+Server = require 'server'
 
 exports.render = ->
 	p = Page.state.get(0)
@@ -14,42 +16,46 @@ exports.render = ->
 		contain = Obs.create false
 		showPicture({key: Plugin.resourceUri('map.jpg')})
 	else if p == 'artiesten'
-		p2 = Page.state.get(1)
-		if p2 == 'v'
-			# Individuele Artiest bekijken
-			
-		else if p2 == 'vr'
-			Dom.div !->
-				
-				showArtiestBlok({naam: 'Muse', podium: 'Main Stage', link: 'muse', image: 'muse.jpg', bg: '#e6007e'})
-				showArtiestBlok({naam: 'Elbow', podium: 'Main Stage', link: 'elbow', image: 'elbow.jpg', bg: '#e6007e'})
-				showArtiestBlok({naam: 'George Ezra', podium: 'Main Stage', link: 'george-ezra', image: 'george-ezra.jpg', bg: '#e6007e'})
-				showArtiestBlok({naam: 'Slash', podium: '3FM Stage', link: 'slash', image: 'slash.jpg', bg: '#e6007e'})
-				showArtiestBlok({naam: 'Faith No More', podium: '3FM Stage', link: 'faith-no-more', image: 'faith-no-more.jpg', bg: '#e6007e'})
-				showArtiestBlok({naam: 'Shaka Ponk', podium: '3FM Stage', link: 'shaka-ponk', image: 'shaka-ponk.jpg', bg: '#e6007e'})
-				showArtiestBlok({naam: 'Above & Beyond', podium: 'Brand Bier Stage', link: 'above-and-beyond', image: 'above-and-beyond.jpg', bg: '#e6007e'})
-				showArtiestBlok({naam: 'Paloma Faith', podium: 'Brand Bier Stage', link: 'paloma-faith', image: 'paloma-faith.jpg', bg: '#e6007e'})
-				showArtiestBlok({naam: 'Gavin James', podium: 'Brand Bier Stage', link: 'gavin-jones', image: 'gavin-james.jpg', bg: '#e6007e'})
-				showArtiestBlok({naam: 'The Amazing Laserbeams', podium: 'Brand Bier Stage', link: 'amazing-laserbeams', image: 'amazing-laserbeams.jpg', bg: '#e6007e'})
-				showArtiestBlok({naam: 'DJ\'s Waxfiend & Prime', podium: 'Stage 4', link: 'djs-waxfiend-and-prime', image: 'djs-waxfiend-and-prime.jpg', bg: '#e6007e'})
-				showArtiestBlok({naam: 'Pop Evil', podium: 'Stage 4', link: 'pop-evil', image: 'pop-evil.jpg', bg: '#e6007e'})
-				showArtiestBlok({naam: 'Aurora', podium: 'Stage 4', link: 'aurora', image: 'aurora.jpg', bg: '#e6007e'})
-				showArtiestBlok({naam: 'Coasts', podium: 'Stage 4', link: 'coasts', image: 'coasts.jpg', bg: '#e6007e'})
-		
-		else if p2 == 'za'
-			Dom.div !->
-				showArtiestBlok({naam: 'Robbie Williams', podium: 'Main Stage', link: 'robbie-williams', image: 'robbie-williams.jpg', bg: '#792182'})
-				showArtiestBlok({naam: 'The Script', podium: 'Main Stage', link: 'the-script', image: 'the-script.jpg', bg: '#792182'})
-				showArtiestBlok({naam: 'Anouk', podium: 'Main Stage', link: 'anouk', image: 'anouk.jpg', bg: '#792182'})
-				showArtiestBlok({naam: 'Avicii', podium: '3FM Stage', link: 'avicii', image: 'avicii.jpg', bg: '#792182'})
-		
-		else if p2 == 'zo'
-			Dom.div !->
-				showArtiestBlok({naam: 'Foo Fighters', podium: 'Main Stage', link: 'foo-fighters', image: 'foo-fighters.jpg', bg: '#b4b415'})
-				showArtiestBlok({naam: 'Pharrell', podium: 'Main Stage', link: 'pharrel', image: 'pharrell.jpg', bg: '#b4b415'})
-				showArtiestBlok({naam: 'OneRepublic', podium: 'Main Stage', link: 'onerepublic', image: 'one-republic.jpg', bg: '#b4b415'})
-				showArtiestBlok({naam: 'Sam Smith', podium: '3FM Stage', link: 'sam-smith', image: 'sam-smith.jpg', bg: '#b4b415'})
-		
+		p2 = Page.state.get(1)		
+		if p2 == 'vr' || p2 == 'za' || p2 == 'zo'
+			p3 = Page.state.get(2)
+			if Db.shared.get('artiesten', p3) != undefined
+				showArtiest(p3)			
+			else
+				dag = Db.shared.get("dagen", p2)
+				Db.shared.iterate 'artiesten', (artiest) !->
+					if artiest.get("dag") == p2
+						podium = Db.shared.get("podia", artiest.get("podium"))
+						
+						
+						Dom.div !->
+							Dom.onTap !->
+								Page.nav ['artiesten', p2, artiest.key()]
+							Dom.style
+								width: '100%'
+								height: '150px'
+								display: 'inline-block'
+								backgroundImage: 'url(' + Plugin.resourceUri(artiest.get("img")) + ')'
+								backgroundSize: 'cover'
+								backgroundPosition: '50% 50%'
+								overflow: 'hidden'
+								position: 'relative'
+								marginBottom: '5px'
+							
+							Dom.div !->
+								Dom.text "" + artiest.get('naam') + " - " + podium.naam
+								Dom.style
+									padding: '5px'
+									width: '100%'
+									display: 'block'
+									position: 'absolute'
+									bottom: '0'
+									backgroundColor: dag.kleur
+									color: 'white'
+									fontWeight: 'bold'
+						
+						#showArtiestBlok({naam: artiest.get('naam'), podium: podium.naam, link: artiest.key(), image: artiest.get("img"), bg: dag.kleur})
+				,(artiest) -> [artiest.get("podium"), -artiest.get("start")]
 		else
 			Ui.list !->
 				Dom.h2 "Artiesten"
@@ -65,6 +71,175 @@ exports.render = ->
 					Dom.text "Zondag"
 					Dom.onTap !->
 						Page.nav ['artiesten', 'zo']
+	
+	else if p == 'tijdschema'
+		p2 = Page.state.get(1)
+		if p2 == "vr" || p2 == "za" || p2 == "zo"
+			p3 = Page.state.get(2)
+			if Db.shared.get('artiesten', p3) != undefined
+				showArtiest(p3)
+			else
+				dag = Db.shared.get('dagen', p2)
+				
+				# Titel
+				Dom.div !->
+					Dom.text "" + dag.naam
+					Dom.style
+						width: '100%'
+						height: '25px'
+						paddingTop: '5px'
+						backgroundColor: '' + dag.kleur
+						color: 'white'
+						fontWeight: 'bold'
+						textAlign: 'center'
+				
+				# Blokschema
+				Dom.div !->
+					Dom.style
+						backgroundColor: '' + dag.kleur
+						width: '100%'
+						height: 'auto'
+					
+					# Header voor tijd
+					Dom.div !->
+							Dom.style
+								width: '25%'
+								paddingTop: '5px'
+								paddingBottom: '5px'
+								display: 'inline-block'
+								color: '#ffe500'
+								textAlign: 'center'
+								textTransform: 'uppercase'
+								fontWeight: 'bold'
+								fontSize: '100%'
+								backgroundColor: '#000'
+							Dom.text "Tijd"
+					# Header voor podia
+					Db.shared.iterate 'podia', (podium) !->
+						Dom.div !->
+							Dom.style
+								width: 'calc(25% - 1px)'
+								paddingTop: '5px'
+								paddingBottom: '5px'
+								borderLeftWidth: '1px'
+								borderLeftStyle: 'solid'
+								borderLeftColor: '' + dag.kleur
+								display: 'inline-block'
+								color: '#ffe500'
+								textAlign: 'center'
+								textTransform: 'uppercase'
+								fontWeight: 'bold'
+								fontSize: '100%'
+								backgroundColor: '#000'
+							Dom.text podium.get('naam')
+					
+					# Tijd blok
+					Dom.div !->
+						Dom.style
+							width: '25%'
+							display: 'block'
+							float: 'left'
+						
+						if p2 == 'vr'
+							i = 15
+						else
+							i = 13
+						loop
+							Dom.div !->
+								Dom.style
+									height:'50px'
+									width: '100%'
+								Dom.div !->
+									Dom.style
+										width: '50px'
+										textAlign: 'center'
+										color: '#FFF'
+										backgroundColor: '#222221'
+										marginLeft: 'calc(50% - 25px)'
+									Dom.text "" + i + ":00"
+							
+							i++
+							break if i > 23
+					
+					# Podia
+					Db.shared.iterate 'podia', (podium) !->
+						if p2 == 'vr'
+							start = 15
+						else
+							start = 13
+						
+						Dom.div !->
+							Dom.style
+								width: 'calc(25% - 1px)'
+								height: (24-start)*50 + 'px'
+								display: 'block'
+								float: 'left'
+								borderLeftWidth: '1px'
+								borderLeftStyle: 'solid'
+								borderLeftColor: '#000'
+								position: 'relative'
+						
+							# Iterate through artists
+							Db.shared.iterate 'artiesten', (artiest) !->
+								#Dom.text "Podium \"" + p2 + "\" - \"" + artiest.get("dag") + "\""
+								if artiest.get("dag") == p2 && Db.shared.get("podia", artiest.get('podium'), "naam") == podium.get("naam")
+									Dom.div !->
+										if Db.shared.get("wantToSee", artiest.key(), Plugin.userId()) == 1
+											color = "#00FF00"
+										else
+											color = "#FF0000"
+											
+										Dom.onTap !->
+											Server.call 'wantToSee', artiest.key()
+										Dom.style
+											backgroundColor: '' + color
+											minHeight: (artiest.get('stop')-artiest.get('start'))*50 + 'px'
+											width: '90%'
+											marginLeft: '5%'
+											marginTop: (artiest.get('start')-start)*50 + 'px'
+											position: 'absolute';
+										Dom.div !->
+											Dom.text artiest.get('start') + " - " + artiest.get('stop')
+											Dom.style
+												padding: '2px'
+												margin: '0'
+												fontSize: '50%'
+												fontWeight: 'bold'
+												textAlign: 'center'
+												color: '#000'
+										Dom.div !->
+											Dom.text artiest.get('naam')
+											Dom.onTap !->
+												Page.nav [p, p2, artiest.key()]
+											Dom.style
+												padding: '2px'
+												textAlign: 'center'
+												color: '#000'
+												fontSize: '75%'
+												fontWeight: 'bold'
+												textTransform: 'uppercase'
+					
+					# Clear both
+					Dom.div !->
+						Dom.style
+							clear: 'both'
+					
+		else
+			Ui.list !->
+				Dom.h2 "Tijdschema"
+				Ui.item !->
+					Dom.text "Vrijdag"
+					Dom.onTap !->
+						Page.nav ['tijdschema', 'vr']
+				Ui.item !->
+					Dom.text "Zaterdag"
+					Dom.onTap !->
+						Page.nav ['tijdschema', 'za']
+				Ui.item !->
+					Dom.text "Zondag"
+					Dom.onTap !->
+						Page.nav ['tijdschema', 'zo']
+	
 	else
 		Ui.list !->
 			Dom.h2 "Menu"
@@ -73,11 +248,54 @@ exports.render = ->
 				Dom.onTap !->
 					Page.nav 'artiesten'
 			Ui.item !->
+				Dom.text "Tijdschema"
+				Dom.onTap !->
+					Page.nav 'tijdschema'
+			Ui.item !->
 				Dom.text "Kaart"
 				Dom.onTap !->
 					Page.nav 'map'
 					
 
+
+showArtiest = (id) !->
+	artiest = Db.shared.get('artiesten', id)
+	Dom.div !->
+		Dom.style
+			width: '100%'
+			height: '250px'
+			backgroundImage: 'url(' + Plugin.resourceUri(artiest.img) + ')'
+			backgroundSize: 'cover'
+			#backgroundPosition: '50% 50%'
+			display: 'block'
+	
+	Dom.div !->
+		Dom.h1 artiest.naam
+		Dom.text artiest.text
+		Dom.style
+			padding: '10px'
+			backgroundColor: '#FFF'
+			marginBottom: '10px'
+	
+	Ui.list !->
+		Dom.h2 "Wie wil dit zien?"
+		total = 0
+		wantTo = Db.shared.ref('wantToSee', id);
+		wantTo.iterate (see) !->
+			if see.get() == 1
+				total++
+				Ui.item !->
+					Ui.avatar Plugin.userAvatar(see.key())
+					Dom.div !->
+						Dom.style
+							marginLeft: '10px'
+						Dom.text Plugin.userName(see.key())
+		if total == 0
+			Ui.item !->
+				Dom.style
+					fontStyle: 'italic'
+				Dom.text "Niemand"
+				
 
 showArtiestBlok = (opts) !->
 	Dom.div !->
