@@ -78,25 +78,24 @@ exports.render = ->
 			p3 = Page.state.get(2)
 			if Db.shared.get('artiesten', p3) != undefined
 				showArtiest(p3)
-			else
-				dag = Db.shared.get('dagen', p2)
-				
+			else				
 				# Dag links
 				Db.shared.iterate 'dagen', (day) !->
 					Dom.div !->
-						Dom.text "" + day.naam
+						Dom.text "" + day.get('naam')
 						Dom.onTap !->
-							Page.nav ['tijdschema', day]
+							Page.nav ['tijdschema', day.key()]
 						Dom.style
 							width: '33%'
 							height: '25px'
 							display: 'inline-block'
 							paddingTop: '5px'
-							backgroundColor: '' + day.kleur
+							backgroundColor: '' + day.get('kleur')
 							color: 'white'
 							fontWeight: 'bold'
 							textAlign: 'center'
 				
+				dag = Db.shared.get('dagen', p2)
 				# Blokschema
 				Dom.div !->
 					Dom.style
