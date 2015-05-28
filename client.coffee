@@ -81,17 +81,21 @@ exports.render = ->
 			else
 				dag = Db.shared.get('dagen', p2)
 				
-				# Titel
-				Dom.div !->
-					Dom.text "" + dag.naam
-					Dom.style
-						width: '100%'
-						height: '25px'
-						paddingTop: '5px'
-						backgroundColor: '' + dag.kleur
-						color: 'white'
-						fontWeight: 'bold'
-						textAlign: 'center'
+				# Dag links
+				Db.shared.iterate 'dagen', (day) !->
+					Dom.div !->
+						Dom.text "" + day.naam
+						Dom.onTap !->
+							Page.nav ['tijdschema', day]
+						Dom.style
+							width: '33%'
+							height: '25px'
+							display: 'inline-block'
+							paddingTop: '5px'
+							backgroundColor: '' + day.kleur
+							color: 'white'
+							fontWeight: 'bold'
+							textAlign: 'center'
 				
 				# Blokschema
 				Dom.div !->
